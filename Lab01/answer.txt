@@ -1,0 +1,3 @@
+Assignment 4.1:
+    What value is printed for roundedCost? -> 19
+    Is it rounded to the nearest integer, or truncated? -> It is truncated because Java removes the decimal part.

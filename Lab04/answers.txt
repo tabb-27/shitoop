@@ -1,0 +1,18 @@
+5.Question: Suppose you write one constructor that builds a DVD from its title, and then another
+that builds a DVD from its category. Does Java allow this? Why?
+-> No, Java does not allow this because both constructiors would require a String as parameter(both title and category are string).Java differentiates overloaded methods by their signatures (the number of parameters, the type of parameters, the order of parameters).In this case, both constructor have same signatures : a single String, resulting in duplicate methods and raise error.
+
+9.Question: Compare the varargs version with the array version. Which one do you prefer in this
+case, and why?
+->I prefer varargs because it is more flexible than array version. Varargs allows passing a list of parameters without having to construct an array, and the parameter acts as an array in the method. 
+
+10.Question: Is Java a pass by value or a pass by reference programming language?
+-> Java is a pass by value programming language
+
+After the call swap(jungleDVD, cinderellaDVD), why do the titles of these two objects
+stay the same?
+->Java is a pass by value programming language. When the swap method runs, it receives copies of the memory references of 2 DVDs.The method swaps these copies locally, but does not alter the original variables.
+
+After the call changeTitle(jungleDVD, cinderellaDVD.getTitle()), why is the title of
+jungleDVD changed?
+->The title change because the copied reference in the method still points to the same object in memory as the original variable. When the method calls .setTitle(), it directly alter the original object. When method calls "dvd = new DigitalVideoDisc(oldTitle)", it only changes the object that the copied reference points to, not the original variables, thus the object that refered by the original variables remains unchanged.
